@@ -1,0 +1,25 @@
+[project]
+name = "stumpy-jax"
+version = "0.1.0"
+description = "JAX (GPU) implementation of the STUMPY matrix profile"
+readme = "README.md"
+authors = [
+    { name = "Christopher Lee-Messer", email = "chris@lee-messer.net" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "jax[cuda13]>=0.12.0.1",
+    "numpy>=2.5.4",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "numba-cuda[cu13]>=0.30.4",
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+    "stumpy>=1.14.1",
+]
